@@ -33,3 +33,19 @@ export type RootTabScreenProps<Screen extends keyof RootTabParamList> = Composit
   BottomTabScreenProps<RootTabParamList, Screen>,
   NativeStackScreenProps<RootStackParamList>
 >;
+
+export enum Positions {
+  FWD = 'FWD',
+  MID = 'MID',
+  DEF = 'DEF',
+  GK = 'GK'
+}
+
+export type Player = {
+  id: string,
+  name: string,
+  match: string,
+  price: number,
+  position: string,
+  totalPoints: number
+}
