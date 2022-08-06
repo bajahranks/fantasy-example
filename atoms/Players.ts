@@ -1,6 +1,7 @@
 import {atom, selector} from "recoil";
 import players from '../assets/data/players';
 import response from "../assets/data/response.json";
+import api from '../config';
 
 const pos2pos = {
     Attacker: 'FWD',
@@ -15,8 +16,8 @@ export const allPlayersState = selector({
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': '71425ff79dmsh18f6bc25700b953p17b370jsn1fc334c1ef83',
-                'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com'
+                'X-RapidAPI-Key': api.key,
+                'X-RapidAPI-Host': api.host
             }
         };
 
